@@ -61,7 +61,7 @@ app.get('/', async (req, res) => {
   try {
 
     let reslut;
- reslut=await pool.query('select * from user_login_hdr order by 1 desc')
+ //reslut=await pool.query('select * from user_login_hdr order by 1 desc')
 
  
 //     await pool.query(`CREATE TABLE user_login_hdr (
@@ -85,7 +85,7 @@ app.get('/', async (req, res) => {
 // ADD COLUMN createddate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 // ADD COLUMN modifieddate TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 // `)
-    res.json(reslut?.rows||'hello');
+    res.json('hello');
   } catch (error) {
     console.error('Error executing SQL query', error);
     res.status(500).json({ error: 'Internal Server Error' });
