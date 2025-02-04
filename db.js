@@ -25,9 +25,6 @@ require('dotenv').config();
 
 // module.exports = pool;
 
-const { Pool } = require('pg');  // Use Pool for connection pooling
-const fs = require('fs');  // In case you need to handle certificates
-
 // Connection string and SSL configuration
 const pool = new Pool({
  user: process.env.USER,
